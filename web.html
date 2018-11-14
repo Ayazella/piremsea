@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sweet Alert</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+
+</head>
+<body>
+
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript">
+swal("WELCOME!");
+</script>
+
+
+</body>
+<style> 
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+
+
+<p>Kullanıcı Formu:</p>
+
+<form>
+  <form action="/action_page.php">
+  Firstname: <input type="text" name="usrname" maxlength="50"><br>
+  <input type="submit" value="Submit">
+</form>
+  <<form action="/action_page.php">
+  Lastname: <input type="text" name="usrname" maxlength="50"><br>
+  <input type="submit" value="Submit">
+</form>
+<input type="radio" name="genders" value="" id="myRadio">Female
+<input type="radio" name="genders" value="" id="myRadio">Male
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myRadio").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+ 
+ 
+   
+   
+   <label for="number">Numara</label>
+  <input type="text" id="number" name="number">
+  <label for="job">Meslek</label>
+  <input type="text" id="job" name="job">
+  <label for="price">Maaş</label>
+  <input type="text" id="price" name="price">
+  
+  
+  
+</form>
+
+<p>İlgi alanlarınız:</p>
+
+Spor: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+
+
+
+<script>
+ 
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>
+
+Müzik: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+
+
+
+<script>
+ 
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>
+
+Sinema: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+
+
+
+<script>
+ 
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>
+
+Resim/Sanat: <input type="checkbox" id="myCheck"  onclick="myFunction()">
+
+
+
+<script>
+ 
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>
+
+
+<p>Doğum tarihiniz</p>
+
+<form action="/action_page.php">
+  Birthday:
+  <input type="date" name="bday">
+  <input type="submit">
+</form>
+
+<p>Telefon numarası</p>
+
+<script language="javascript">
+
+
+
+
+
+function isTELNO(obj) {
+
+
+var rgpxp = new RegExp(/[-( /]*(0{1})?[-)( /]*([d]{3})[-) /]*([1-9]{1})([d]{2})[- /]*([d]{2})[- /]*([d]{2})+$/);
+
+
+if (obj.value.search(rgpxp) == -1) {
+
+
+alert ("Lütfen doğru bir telefon numarası giriniz!")
+
+
+} else {
+
+
+obj.value=obj.value.replace(rgpxp,"$1($2) $3$4 $5 $6")
+
+
+}
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+<input type="text" onchange="isTELNO(this)" />
+
+
+<p>Adres</p>
+
+<textarea id="textarea" rows="8" cols="30" maxlength="99" ></textarea>
+<div id="textarea_feedback"></div>
+
+
+
+<h2>İl</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    
+    <th style="width:40%;">İl</th>
+  </tr>
+  <tr>
+    
+    <td>İstanbul</td>
+  </tr>
+  <tr>
+    
+    <td>Ankara</td>
+  </tr>
+  <tr>
+    
+    <td>İzmir</td>
+  </tr>
+  <tr>
+    
+    <td>Adana</td>
+  </tr>
+  <tr>
+    
+    <td>Antalya</td>
+  </tr>
+  <tr>
+    
+    <td>Diyarbakır</td>
+  </tr>
+  <tr>
+    
+    <td>K.K.T.C</td>
+  </tr>
+  <tr>
+    
+    <td>New York</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+
+<form action="/action_page.php" method="get">
+
+<button type="submit" value="Submit">Save</button>
+<button type="reset" value="Reset">Reset</button>
+</form>
+
+
+</body>
+</html>
